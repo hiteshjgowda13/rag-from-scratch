@@ -9,11 +9,11 @@
 # -cost increases (token)
 # -accuracy drops
 
-
+from typing import Any
 from dataclasses import dataclass
 
 @dataclass
 class Chunk:
     content:str
-    metadata:dict
+    metadata:dict[str, Any]
     

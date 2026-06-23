@@ -1,5 +1,5 @@
 from pathlib import Path
-from loaders.document import Document
+from document import Document
 def loader():
 
     folder = Path("data/raw")
@@ -26,4 +26,6 @@ def loader():
         print("no such path")
 
     return documents_list
+
+# print(loader())
 
