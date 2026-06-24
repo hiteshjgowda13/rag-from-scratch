@@ -1,2 +1,6 @@
 numpy
 sentence-transformers
+google-genai
+dotenv
+fastapi
+uvicorn
