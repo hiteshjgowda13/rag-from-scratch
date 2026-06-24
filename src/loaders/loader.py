@@ -1,8 +1,8 @@
 from pathlib import Path
-from document import Document
+from loaders.document import Document
 def loader():
 
-    folder = Path("data/raw")
+    folder = Path("../data/raw")
     documents_list :list[Document]=[]
     count =1
     if folder.exists():
