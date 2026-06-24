@@ -1,6 +1,7 @@
 from embedding.embedding import EmbeddedChunk
 from chunking.chunking import Chunk
 from sentence_transformers import SentenceTransformer
+import numpy as np
 
 class Embedder:
     """
@@ -39,7 +40,17 @@ class Embedder:
     
         return embeddings
             
+    def embedd_query(self,query:str)->np.ndarray:
+        """This function is used to convert the user query to embedding for searching.
+        args:
+            string(query)
+        return:
+        numpy ndarray
+        """
+        query_vector = self.model.encode(query,convert_to_numpy=True)
 
+        return query_vector
+    
 #testing: works 
 # chunks = [
 #     Chunk(
